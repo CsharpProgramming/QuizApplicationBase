@@ -13,7 +13,6 @@ namespace QuizApplication
     {
         int CorrectA = 0;
         int QuestionID2 = 1;
-
         int Score = 0;
 
         bool GaveA = false;
