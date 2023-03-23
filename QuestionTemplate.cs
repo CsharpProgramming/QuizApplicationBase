@@ -32,9 +32,7 @@ namespace QuizApplication
         {
             timer1.Stop();
 
-            QuestionID2++;
-
-            //Next Questions after
+            //Next questions (2, 3...)
 
             if (QuestionID2 == 2) //Question 2
             {
