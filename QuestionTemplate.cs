@@ -44,7 +44,7 @@ namespace QuizApplication
                 Question("Writes 4", "Gives a error!", "Writes 2 + 2", "Gives you free bitcoin", 3, "Console.WriteLine(\"2 + 2\")");
             }
 
-            else if (QuestionID2 == 4) //And so on
+            else if (QuestionID2 == 4)
             {
                 Question("Writes Hello world!", "Gives a error: Hello World!", "Writes Hello world", "Plays a mp3: Hello world", 3, "Console.WriteLine(\"Hello world\")");
             }
