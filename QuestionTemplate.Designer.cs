@@ -1,4 +1,4 @@
-﻿
+
 namespace QuizApplication
 {
     partial class QuestionTemplate
@@ -30,7 +30,6 @@ namespace QuizApplication
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.CodeQuestion = new System.Windows.Forms.Label();
             this.Button1 = new Siticone.Desktop.UI.WinForms.SiticoneGradientButton();
             this.Button2 = new Siticone.Desktop.UI.WinForms.SiticoneGradientButton();
             this.Button4 = new Siticone.Desktop.UI.WinForms.SiticoneGradientButton();
@@ -39,18 +38,8 @@ namespace QuizApplication
             this.LabelResult = new Siticone.Desktop.UI.WinForms.SiticoneGradientButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.CodeQuestion = new Siticone.Desktop.UI.WinForms.SiticoneGradientButton();
             this.SuspendLayout();
-            // 
-            // CodeQuestion
-            // 
-            this.CodeQuestion.AutoSize = true;
-            this.CodeQuestion.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CodeQuestion.ForeColor = System.Drawing.Color.RosyBrown;
-            this.CodeQuestion.Location = new System.Drawing.Point(303, 126);
-            this.CodeQuestion.Name = "CodeQuestion";
-            this.CodeQuestion.Size = new System.Drawing.Size(276, 22);
-            this.CodeQuestion.TabIndex = 1;
-            this.CodeQuestion.Text = "Console.WriteLine(\"Hello world!\")";
             // 
             // Button1
             // 
@@ -64,8 +53,9 @@ namespace QuizApplication
             this.Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Button1.FillColor = System.Drawing.Color.RosyBrown;
             this.Button1.FillColor2 = System.Drawing.Color.LightCoral;
-            this.Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Button1.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button1.ForeColor = System.Drawing.Color.White;
+            this.Button1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
             this.Button1.Location = new System.Drawing.Point(73, 271);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(250, 69);
@@ -85,8 +75,9 @@ namespace QuizApplication
             this.Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Button2.FillColor = System.Drawing.Color.RosyBrown;
             this.Button2.FillColor2 = System.Drawing.Color.LightCoral;
-            this.Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Button2.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Bold);
             this.Button2.ForeColor = System.Drawing.Color.White;
+            this.Button2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
             this.Button2.Location = new System.Drawing.Point(73, 365);
             this.Button2.Name = "Button2";
             this.Button2.Size = new System.Drawing.Size(250, 69);
@@ -106,8 +97,9 @@ namespace QuizApplication
             this.Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Button4.FillColor = System.Drawing.Color.RosyBrown;
             this.Button4.FillColor2 = System.Drawing.Color.LightCoral;
-            this.Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Button4.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Bold);
             this.Button4.ForeColor = System.Drawing.Color.White;
+            this.Button4.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
             this.Button4.Location = new System.Drawing.Point(538, 365);
             this.Button4.Name = "Button4";
             this.Button4.Size = new System.Drawing.Size(250, 69);
@@ -127,8 +119,9 @@ namespace QuizApplication
             this.Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Button3.FillColor = System.Drawing.Color.RosyBrown;
             this.Button3.FillColor2 = System.Drawing.Color.LightCoral;
-            this.Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Button3.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Bold);
             this.Button3.ForeColor = System.Drawing.Color.White;
+            this.Button3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
             this.Button3.Location = new System.Drawing.Point(538, 271);
             this.Button3.Name = "Button3";
             this.Button3.Size = new System.Drawing.Size(250, 69);
@@ -152,6 +145,8 @@ namespace QuizApplication
             this.LabelResult.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(60)))));
             this.LabelResult.Font = new System.Drawing.Font("Tw Cen MT", 14F, System.Drawing.FontStyle.Bold);
             this.LabelResult.ForeColor = System.Drawing.Color.RosyBrown;
+            this.LabelResult.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(60)))));
+            this.LabelResult.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(60)))));
             this.LabelResult.Location = new System.Drawing.Point(307, 209);
             this.LabelResult.Name = "LabelResult";
             this.LabelResult.PressedColor = System.Drawing.Color.Transparent;
@@ -183,11 +178,32 @@ namespace QuizApplication
             this.label2.Text = "Score: 0";
             this.label2.Visible = false;
             // 
+            // CodeQuestion
+            // 
+            this.CodeQuestion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.CodeQuestion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.CodeQuestion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.CodeQuestion.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.CodeQuestion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.CodeQuestion.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(60)))));
+            this.CodeQuestion.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(60)))));
+            this.CodeQuestion.Font = new System.Drawing.Font("Tw Cen MT", 14F, System.Drawing.FontStyle.Bold);
+            this.CodeQuestion.ForeColor = System.Drawing.Color.RosyBrown;
+            this.CodeQuestion.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(60)))));
+            this.CodeQuestion.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(60)))));
+            this.CodeQuestion.Location = new System.Drawing.Point(104, 103);
+            this.CodeQuestion.Name = "CodeQuestion";
+            this.CodeQuestion.PressedColor = System.Drawing.Color.Transparent;
+            this.CodeQuestion.Size = new System.Drawing.Size(658, 112);
+            this.CodeQuestion.TabIndex = 9;
+            this.CodeQuestion.Text = "Console.WriteLine(\"Hello world!\")";
+            // 
             // QuestionTemplate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(60)))));
+            this.Controls.Add(this.CodeQuestion);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LabelResult);
@@ -195,7 +211,6 @@ namespace QuizApplication
             this.Controls.Add(this.Button3);
             this.Controls.Add(this.Button2);
             this.Controls.Add(this.Button1);
-            this.Controls.Add(this.CodeQuestion);
             this.Name = "QuestionTemplate";
             this.Size = new System.Drawing.Size(872, 484);
             this.Load += new System.EventHandler(this.QuestionTemplate_Load);
@@ -205,7 +220,6 @@ namespace QuizApplication
         }
 
         #endregion
-        private System.Windows.Forms.Label CodeQuestion;
         private Siticone.Desktop.UI.WinForms.SiticoneGradientButton Button1;
         private Siticone.Desktop.UI.WinForms.SiticoneGradientButton Button2;
         private Siticone.Desktop.UI.WinForms.SiticoneGradientButton Button4;
@@ -214,5 +228,6 @@ namespace QuizApplication
         private Siticone.Desktop.UI.WinForms.SiticoneGradientButton LabelResult;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private Siticone.Desktop.UI.WinForms.SiticoneGradientButton CodeQuestion;
     }
 }
