@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,8 +13,12 @@ namespace QuizApplication
     public partial class QuestionTemplate : UserControl
     {
         int CorrectA = 0;
-        int QuestionID2 = 1;
+        int QuestionID = 0;
         int Score = 0;
+
+        string ColorTheme = "Pink";
+        string PromptMessage = "Select the answer!";
+
         bool GaveA = false;
 
         public QuestionTemplate()
@@ -23,32 +28,23 @@ namespace QuizApplication
 
         private void QuestionTemplate_Load(object sender, EventArgs e)
         {
-            //First Question
-            Question("Writes Hello World!", "Gives a error: Hello World!", "Writes Hello world", "Plays a mp3: Hello world", 1, "Console.WriteLine(\"Hello World!\")");
+            ColorTheme = "Blue"; //Themes: Pink, Green, Yellow, Blue
+            PromptMessage = "Select the answer";
+
+            Theme();
+            ManageQuestions();
         }
 
         private void ManageQuestions()
         {
             timer1.Stop();
+            QuestionID++;
 
-            //Next questions (2, 3...)
+            Question(1, "Writes Hello World!", "Gives a error: Hello World!", "Writes Hello world", "Plays a mp3: Hello world", 1, "Console.WriteLine(\"Hello World!\")");
+            Question(2, "Writes Hello World", "Gives a error!", "Writes Hello world", "Gives you free bitcoin", 2, "Console.WriteLine(Hello World!)");
+            Question(3, "Writes 4", "Gives a error!", "Writes 2 + 2", "Gives you free bitcoin", 3, "Console.WriteLine(\"2 + 2\")");
 
-            if (QuestionID2 == 2) //Question 2
-            {
-                Question("Writes Hello World", "Gives a error!", "Writes Hello world", "Gives you free bitcoin", 2, "Console.WriteLine(Hello World!)");
-            }
-
-            else if (QuestionID2 == 3) //Question 3
-            {
-                Question("Writes 4", "Gives a error!", "Writes 2 + 2", "Gives you free bitcoin", 3, "Console.WriteLine(\"2 + 2\")");
-            }
-
-            else if (QuestionID2 == 4)
-            {
-                Question("Writes Hello world!", "Gives a error: Hello World!", "Writes Hello world", "Plays a mp3: Hello world", 3, "Console.WriteLine(\"Hello world\")");
-            }
-
-            else
+            if (QuestionID == 4)
             {
                 //End of the Quiz
                 label1.Visible = true;
@@ -65,25 +61,100 @@ namespace QuizApplication
 
         //Dont change this code to add custom questions change the upper one
 
-        public void Question(string A1, string A2, string A3, string A4, int Correct, string Code)
+        public void Question(int QuestionNumber, string A1, string A2, string A3, string A4, int Correct, string Code)
         {
-            GaveA = false;
+            if (QuestionNumber == QuestionID)
+            {
+                GaveA = false;
 
-            //Change UI text
-            Button1.Text = A1;
-            Button2.Text = A2;
-            Button3.Text = A3;
-            Button4.Text = A4;
-            CodeQuestion.Text = Code;
+                //Change UI text
+                Button1.Text = A1;
+                Button2.Text = A2;
+                Button3.Text = A3;
+                Button4.Text = A4;
+                CodeQuestion.Text = Code;
 
-            CorrectA = Correct;
+                //Set correct button
+                CorrectA = Correct;
 
-            Button1.Enabled = true;
-            Button2.Enabled = true;
-            Button3.Enabled = true;
-            Button4.Enabled = true;
+                Button1.Enabled = true;
+                Button2.Enabled = true;
+                Button3.Enabled = true;
+                Button4.Enabled = true;
 
-            LabelResult.Text = "What does this code do?";
+                LabelResult.Text = PromptMessage;
+            }
+        }
+
+        private void Theme()
+        {
+            if (ColorTheme == "Green")
+            {
+                Button1.FillColor = Color.OliveDrab;
+                Button1.FillColor2 = Color.GreenYellow;
+                Button2.FillColor = Color.OliveDrab;
+                Button2.FillColor2 = Color.GreenYellow;
+                Button3.FillColor = Color.OliveDrab;
+                Button3.FillColor2 = Color.GreenYellow;
+                Button4.FillColor = Color.OliveDrab;
+                Button4.FillColor2 = Color.GreenYellow;
+
+                label1.ForeColor = Color.OliveDrab;
+                label2.ForeColor = Color.OliveDrab;
+                CodeQuestion.ForeColor = Color.OliveDrab;
+                LabelResult.ForeColor = Color.OliveDrab;
+            }
+
+            if (ColorTheme == "Yellow")
+            {
+                Button1.FillColor = Color.Yellow;
+                Button1.FillColor2 = Color.Olive;
+                Button2.FillColor = Color.Yellow;
+                Button2.FillColor2 = Color.Olive;
+                Button3.FillColor = Color.Yellow;
+                Button3.FillColor2 = Color.Olive;
+                Button4.FillColor = Color.Yellow;
+                Button4.FillColor2 = Color.Olive;
+
+                label1.ForeColor = Color.Yellow;
+                label2.ForeColor = Color.Yellow;
+                CodeQuestion.ForeColor = Color.Yellow;
+                LabelResult.ForeColor = Color.Yellow;
+            }
+
+            if (ColorTheme == "Blue")
+            {
+                Button1.FillColor = Color.Aquamarine;
+                Button1.FillColor2 = Color.Turquoise;
+                Button2.FillColor = Color.Aquamarine;
+                Button2.FillColor2 = Color.Turquoise;
+                Button3.FillColor = Color.Aquamarine;
+                Button3.FillColor2 = Color.Turquoise;
+                Button4.FillColor = Color.Aquamarine;
+                Button4.FillColor2 = Color.Turquoise;
+
+                label1.ForeColor = Color.Aquamarine;
+                label2.ForeColor = Color.Aquamarine;
+                CodeQuestion.ForeColor = Color.Aquamarine;
+                LabelResult.ForeColor = Color.Aquamarine;
+            }
+
+            else
+            {
+                Button1.FillColor = Color.RosyBrown;
+                Button1.FillColor2 = Color.LightCoral;
+                Button2.FillColor = Color.RosyBrown;
+                Button2.FillColor2 = Color.LightCoral;
+                Button3.FillColor = Color.RosyBrown;
+                Button3.FillColor2 = Color.LightCoral;
+                Button4.FillColor = Color.RosyBrown;
+                Button4.FillColor2 = Color.LightCoral;
+
+                label1.ForeColor = Color.RosyBrown;
+                label2.ForeColor = Color.RosyBrown;
+                CodeQuestion.ForeColor = Color.RosyBrown;
+                LabelResult.ForeColor = Color.RosyBrown;
+            }
         }
 
         private void Button1_Click(object sender, EventArgs e)
