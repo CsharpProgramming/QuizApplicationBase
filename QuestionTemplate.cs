@@ -13,10 +13,8 @@ namespace QuizApplication
         int CorrectA = 0;
         int QuestionID = 0;
         int Score = 0;
-
         string ColorTheme = "Pink";
         string PromptMessage = "Select the answer!";
-
         bool GaveA = false;
 
         public QuestionTemplate()
