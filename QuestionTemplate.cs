@@ -63,7 +63,6 @@ namespace QuizApplication
             {
                 GaveA = false;
 
-                //Change UI text
                 Button1.Text = A1;
                 Button2.Text = A2;
                 Button3.Text = A3;
