@@ -69,7 +69,6 @@ namespace QuizApplication
                 Button4.Text = A4;
                 CodeQuestion.Text = Code;
 
-                //Set correct button
                 CorrectA = Correct;
 
                 Button1.Enabled = true;
