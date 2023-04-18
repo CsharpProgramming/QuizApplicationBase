@@ -23,7 +23,7 @@ namespace QuizApplication
 
         private void QuestionTemplate_Load(object sender, EventArgs e)
         {
-            ColorTheme = "Blue"; //Themes: Pink, Green, Yellow and Blue
+            ColorTheme = "Blue"; //Themes: Pink, Green, Yellow and Blue.
             PromptMessage = "Select the answer";
 
             Theme();
